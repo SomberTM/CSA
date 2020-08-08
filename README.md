@@ -1,4 +1,4 @@
-# CSA - Files
+# CSA
 Activites for myPLTW AP Computer Science Applications
 ```java
 public class Java {

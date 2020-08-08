@@ -16,6 +16,7 @@ public class CompoundOperators_1_1_4
   public static void main(String[] args)
   {
     CompoundOperators_1_1_4 compound = new CompoundOperators_1_1_4();
+    /* Use method refrence operator to refrence the static method createPerson bc CompoundOperators_1_1_4 is long to use each time */
     BiFunction<String, Double, Person> personFactory = CompoundOperators_1_1_4::createPerson;
 
     compound.addPerson("bob", 11.75);

@@ -4,3 +4,4 @@
   - [CompoundOperators 1.1.4](https://github.com/SomberTM/CSA/blob/master/CompoundOperators_1_1_4.java)
   - [FivePlanetTravel 1.1.5](https://github.com/SomberTM/CSA/blob/master/FivePlanetTravel_1_1_5.java)
   - [FivePlanetTravel (HashMap) 1.1.5](https://github.com/SomberTM/CSA/blob/master/FivePlanetTravelHashMap.java)
+  - [NumbersRiddle 1.1.6](https://github.com/SomberTM/CSA/blob/master/NumbersRiddle.java)

@@ -19,7 +19,7 @@
   - [Expression & Assignment Statements 1.1.3](https://github.com/SomberTM/CSA/blob/master/assignments/Activity_1.1.3_Expressions_and_Assignment_Statements_ANS.docx)
   - [Compound Assignment Operators 1.1.4](https://github.com/SomberTM/CSA/blob/master/assignments/Activity_1.1.4_Compound_Assignment_Operators_ANS.docx)
   - [Casting & Range of Values 1.1.5](https://github.com/SomberTM/CSA/blob/master/assignments/Activity_1.1.5_Casting_and_Range_of_Variables_ANS.docx)
-  - [(Project) Numbers Riddle](https://github.com/SomberTM/CSA/blob/master/assignments/Project_1.1.6_Numbers_Riddle_ANS.docx)
+  - [(Project) Numbers Riddle 1.1.6](https://github.com/SomberTM/CSA/blob/master/assignments/Project_1.1.6_Numbers_Riddle_ANS.docx)
 - 1.2
   - [Objects & Instances of Classes 1.2.2](https://github.com/SomberTM/CSA/blob/master/assignments/Activity_1.2.2_Objects-_Instances_of_a_Class.docx)
   - [Calling a Void Method 1.2.3](https://github.com/SomberTM/CSA/blob/master/assignments/Activity_1.2.3_Calling_a_Void_Method.docx)

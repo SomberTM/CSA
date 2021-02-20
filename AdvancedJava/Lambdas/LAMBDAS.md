@@ -74,4 +74,4 @@ createArray(10, (index, array) -> {
 ```
 ###### Links
 - [W3Schools](https://www.w3schools.com/java/java_lambda.asp#:~:text=Lambda%20Expressions%20were%20added%20in,the%20body%20of%20a%20method.)
-- [Java Example](/Example.java)
+- [Java Example](/AdvancedJava/Lambdas/Example.java)

@@ -1,5 +1,3 @@
-# CSA
-```java
 import java.lang.FunctionalInterface;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,11 +10,21 @@ public class Program {
     }
 
     @FunctionalInterface
-    static interface Using<T extends IDisposable> {
+    static interface Using {
+      void voids();
+    }
+
+    @FunctionalInterface
+    static interface AcceptUsing<T extends IDisposable> {
       void accept(T disposable);
     }
 
-    public static <T extends IDisposable> void using(T disposable, Using<T> function) {
+    public static <T extends IDisposable> void using(T disposable, Using function) {
+        function.voids();
+        disposable.dispose();
+    }
+
+    public static <T extends IDisposable> void using(T disposable, AcceptUsing<T> function) {
         function.accept(disposable);
         disposable.dispose();
     }
@@ -42,12 +50,11 @@ public class Program {
     public static void main(String[] args) {
         DisposableArray<Integer> disposableArray = new DisposableArray<>(5, 6, 1, 2, 10);
 
-        using(disposableArray, array -> {
-            System.out.println(array);
+        using(disposableArray, () -> {
+            System.out.println(disposableArray);
         });
 
         System.out.println(disposableArray);
     }
 
 }
-```

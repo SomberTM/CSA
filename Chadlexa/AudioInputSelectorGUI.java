@@ -1,6 +1,4 @@
 import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
@@ -27,7 +25,7 @@ public class AudioInputSelectorGUI {
 
     private void init() {
         if (singleton == null)
-        singleton = this;
+            singleton = this;
 
         singleton.window = new JFrame("Audio input device selector");
         singleton.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,7 +40,7 @@ public class AudioInputSelectorGUI {
         singleton.label.setAlignmentX(Component.CENTER_ALIGNMENT);
         singleton.panel.add(singleton.label);
 
-        List<String> mixers = AudioUtils.mapMixerInfo(mixer -> mixer.getName());
+        List<String> mixers = AudioUtils.getMixerInfo().stream().map(mixer -> mixer.getName()).collect(Collectors.toList());
 
         String[] mixerNames = new String[mixers.size()];
         for (int i = 0; i < mixers.size(); i++)
@@ -55,12 +53,7 @@ public class AudioInputSelectorGUI {
 
         final JButton save = new JButton("Save");
 
-        save.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                AudioInputSelectorGUI.dispose();
-            }     
-        });
+        save.addActionListener(AudioUtils.createActionListener(() -> AudioInputSelectorGUI.dispose()));
 
         save.setAlignmentX(Component.CENTER_ALIGNMENT);
         singleton.panel.add(save);
@@ -87,7 +80,10 @@ public class AudioInputSelectorGUI {
     }
 
     public static Mixer.Info getSelectedMixerInfo() {
-        return AudioUtils.getMixerInfo().stream().filter(mixer -> mixer.getName().equals(getSelectedAudioDevice())).collect(Collectors.toList()).get(0);
+        List<Mixer.Info> infos = AudioUtils.getMixerInfo().stream().filter(mixer -> mixer.getName().equals(getSelectedAudioDevice())).collect(Collectors.toList());
+        if (infos.size() > 0)
+            return infos.get(0);
+        return null;
     }
 
 }

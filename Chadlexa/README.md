@@ -1,1 +1,1 @@
-# Chadlexa voice assistant
+[New Repo](https://github.com/SomberTM/Chadlexa/tree/main)

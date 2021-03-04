@@ -1,13 +1,10 @@
 public int findHorseSpace(String name)
 { /* to be implemented in part a */ 
-    int index = -1;
-    for (int i = 0; i < this.spaces.size(); i++) {
-        if (this.spaces.get(i).equals(name)) {
-            index = i;
-            break;
-        }
-    }
-    return index;
+    Horse horse;
+    for (int i = 0; i < this.spaces.size(); i++)
+        if ((horse = this.spaces.get(i)) != null && horse.getName().equals(name))
+            return i;
+    return -1;
 }
 
 // ------------------------------------

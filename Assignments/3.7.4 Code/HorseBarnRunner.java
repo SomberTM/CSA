@@ -118,6 +118,11 @@ public class HorseBarnRunner
         }
 
         System.out.println(spaces);
-        System.out.println(horsePermutator(spaces));
+        
+        ArrayList<Horse> random = horsePermutator(spaces);
+        System.out.println(random);
+        for (int i = 0; i < random.size() - 1; i += 2)
+            System.out.println(String.format("%s and %s", random.get(i), random.get(i+1)));
+
     }
 } 
